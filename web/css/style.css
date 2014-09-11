@@ -1,0 +1,270 @@
+@import 'font-awesome.min.css';
+@import 'bootstrap.min.css';
+@import 'animate.css';
+@import url("http://fonts.googleapis.com/css?family=Roboto:300,400,700,300italic");
+
+/* ========== GENERAL STYLES ========== */
+
+body {
+    font-size: 13px;
+    color: #f0f0f0;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding-top: 50px;
+}
+.navbar-brand {
+    padding: 9px 10px;
+}
+.centered
+{
+    text-align:center;
+}
+.navbar {
+    opacity: 0.9;
+    text-transform: uppercase;
+}
+.navbar .badge {
+    background-color: #000;
+}
+.navbar a.locale {
+    padding-right: 0;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+    color: #000;
+    background-color: transparent;
+}
+.logo {
+    padding: 10px;
+    display: inline-block;
+}
+.logo .img-responsive {
+    display: inline-block;
+}
+
+/* ========== BANNER ========== */
+
+.banner {
+    width: 100%;
+    z-index: 1;
+    background: #699;
+    padding: 0;
+    padding-bottom: 140px;
+}
+.banner h1 {
+    font-size: 62px;
+    line-height: 62px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.banner h2 {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 32px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 35px;
+    clear: both;
+    display: block;
+}
+.intro-well {
+    text-align: center;
+    position: relative;
+    z-index: 100;
+    padding-top: 70px;
+}
+.banner p {
+    font-size: 20px;
+}
+
+.banner .btn-primary {
+    border-radius: 3em;
+    padding: 1em 3em 1em 3em;
+    background-color: #fff;
+    border-color: #fff;
+    color: #699;
+    font-size: 1.5em;
+    margin-top: 40px;
+}
+
+/* ========== KNOWLEDGE ========== */
+.knowledge {
+    width: 100%;
+    background-color: #fff;
+    padding-top: 80px;
+}
+.knowledge h1 {
+    margin: 0;
+    padding-bottom: 10px;
+    display: block;
+    clear: both;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+    font-weight: 300;
+    color: #222;
+}
+.knowledge h2 {
+    margin: 0;
+    padding-bottom: 70px;
+    display: block;
+    clear: both;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    font-weight: 300;
+    color: #222;
+}
+.more-knowledge {
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+.knowledge-item {
+    margin-bottom: 40px;
+}
+.knowledge-item h4 {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #0386c9!important;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+}
+.knowledge-item p{
+    margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 22px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+.knowledge-right {
+    padding-top: 70px;
+}
+.knowledge-left {
+    padding-top: 70px;
+}
+.text-align-right {
+    text-align: right;
+}
+.text-align-left {
+    text-align: left;
+}
+.iconbox{
+    background: transparent url('../img/icon_borders.png') no-repeat 0 0;
+    height: 270px;
+    margin: 0 auto 40px auto;
+    position: relative;
+    width: 270px;
+
+}
+.icntitle {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 38px;
+    text-align: center;
+    padding-top:0px;
+}
+.icnp {
+    text-align: center;
+    line-height: 1.6;
+}
+.iconbox > a {
+    height: 126px;
+    left: 50%;
+    margin: -63px 0 0 -63px;
+    position: absolute;
+    text-indent: -9999px;
+    top: 50%;
+    -webkit-transition: all .3s ease-out!important;
+    -moz-transition: all .3s ease-out!important;
+    -ms-transition: all .3s ease-out!important;
+    -o-transition: all .3s ease-out!important;
+    transition: all .3s ease-out!important;
+    width: 126px;
+}
+.icn-1 {
+    background-image: url('../img/i1.png');
+}
+.icn-1:hover {
+    background-position: center bottom;
+}
+.icn-2 {
+    background-image: url('../img/i2.png');
+}
+.icn-2:hover {
+    background-position: center bottom;
+}
+.icn-3 {
+    background-image: url('../img/i3.png');
+}
+.icn-3:hover {
+    background-position: center bottom;
+}
+.icons_left, .icons_right {
+    float:left;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    color:#0386c9;
+    font-size: 22px;
+    font-weight:300;
+    border: 1px solid #0386c9;
+    background-color: #fff;
+    position: relative;
+    -webkit-border-radius: 28px 28px;
+    -moz-border-radius: 28px 28px;
+    border-radius: 28px 28px;
+    transition: all .50s ease-in-out;
+    -moz-transition: all .50s ease-in-out;
+    -webkit-transition: all .50s ease-in-out;
+}
+
+.icons_left {
+    float:left;
+    margin:10px 25px 40px 0;
+}
+
+.icons_right {
+    float:right;
+    margin:10px 0 40px 25px;
+}
+
+/* ========== MEDIA QUIRIES ========== */
+@media (min-width: 768px) {
+    body {
+        padding-top: 145px;
+    }
+    .navbar-nav {
+        font-size: 1.1em;
+        float: none;
+        display: inline-block;
+    }
+    .navbar-nav>li {
+        float: none;
+        display: inline-block;
+    }
+    .nav>li>a {
+        display: inline-block;
+    }
+    .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+        float: none;
+        display: inline-block;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        font-size: 1.3em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar-nav {
+        font-size: 1.3em;
+    }
+}

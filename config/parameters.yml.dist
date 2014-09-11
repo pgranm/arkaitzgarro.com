@@ -1,0 +1,8 @@
+locale: en
+swiftmailer.options:
+    host: smtp.gmail.com
+    port: 465
+    username: username@gmail.com
+    password: blink182
+    encryption: ssl
+    auth_mode: login
