@@ -6,6 +6,7 @@
 /* ========== GENERAL STYLES ========== */
 
 body {
+    position: relative;
     font-size: 13px;
     color: #f0f0f0;
     background-color: #fff;
@@ -243,6 +244,12 @@ body {
     border-radius: 0;
 }
 
+.thumbnail h3 {
+    width: 80%;
+    border-top: 1px solid #f2f2f2;
+    padding-top: 10px;
+}
+
 /* ========== BOOKS ========== */
 .books {
     width: 100%;
@@ -274,6 +281,9 @@ footer p {
         font-size: 1.1em;
         float: none;
         display: inline-block;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        transition: all 0.5s;
     }
     .navbar-nav>li {
         float: none;
@@ -285,6 +295,29 @@ footer p {
     .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
         float: none;
         display: inline-block;
+    }
+    .navbar.small .container {
+        position: relative;
+    }
+    .small .logo-wrapper {
+        -webkit-transition: all 2s ease;
+        -moz-transition: all 2s ease;
+        -ms-transition: all 2s ease;
+        -o-transition: all 2s ease;
+        transition: all 2s ease;
+
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .small .menu-wrapper {
+        -webkit-transition: all 2s ease;
+        -moz-transition: all 2s ease;
+        -ms-transition: all 2s ease;
+        -o-transition: all 2s ease;
+        transition: all 2s ease;
+
+        position: absolute;
     }
 }
 
