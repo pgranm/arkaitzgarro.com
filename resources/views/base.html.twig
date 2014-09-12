@@ -21,11 +21,13 @@
         {% block stylesheets_head %}{% endblock %}
         {% block javascript_head %}{% endblock %}
     </head>
-    <body id="{% block id %}{% endblock %}">
+    <body id="{% block id %}{% endblock %}" data-spy="scroll" data-target=".navbar-nav">
         {% block body %}{% endblock %}
 
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script type="text/javascript" src="{{ app.request.basepath }}/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="{{ app.request.basepath }}/js/scrollspy.min.js"></script>
+        <script type="text/javascript" src="{{ app.request.basepath }}/js/masonry.min.js"></script>
         <script type="text/javascript" src="{{ app.request.basepath }}/js/wow.min.js"></script>
         <script type="text/javascript" src="{{ app.request.basepath }}/js/main.js"></script>
         {% block javascript_footer %}{% endblock %}
