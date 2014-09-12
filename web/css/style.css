@@ -256,6 +256,18 @@ body {
     margin:10px 0 40px 25px;
 }
 
+/* ========== FOOTER ========== */
+footer {
+    background: #34495e;
+    color: #fff;
+    padding: 70px 0;
+    text-align: center;
+}
+footer p {
+    font-size: 15px;
+    line-height: 20px;
+}
+
 /* ========== MEDIA QUIRIES ========== */
 @media (min-width: 768px) {
     body {
