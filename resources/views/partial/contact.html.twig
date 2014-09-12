@@ -1,6 +1,39 @@
 <section class="contact" id="contact">
     <div class="container wow fadeIn animated">
-        <h2>{{ 'contact'|trans }}</h2>
-        <p>{{ 'lorem'|trans }}</p>
+        <div class="row">
+            <h2 class="col-xs-12">{{ 'contact_title'|trans }}</h2>
+            <p class="col-xs-12 col-sm-8 col-sm-offset-2">{{ 'contact_text'|trans|raw }}</p>
+        </div>
+        <form action="{{ path('contact') }}" method="post" class="col-xs-12 col-sm-8 col-sm-offset-2">
+            <div class="row form-group">
+                <div class="col-xs-12">
+                    {{ form_start(contactForm) }}
+                    {{ form_errors(contactForm) }}
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-xs-12 col-sm-6">
+                    {{ form_widget(contactForm.name, {attr: {'class': 'form-control', 'placeholder': 'contact_name'|trans}}) }}
+                    {{ form_errors(contactForm.name) }}
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    {{ form_widget(contactForm.email, {attr: {'class': 'form-control', 'placeholder': 'contact_email'|trans}}) }}
+                    {{ form_errors(contactForm.email) }}
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-xs-12">
+                    {{ form_widget(contactForm.message, {attr: {'class': 'form-control', 'placeholder': 'contact_message'|trans, 'rows': 5}}) }}
+                    {{ form_errors(contactForm.message) }}
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-xs-12">
+                    {{ form_widget(contactForm.submit, {attr: {'class': 'btn btn-primary center-block'}}) }}
+                </div>
+            </div>
+
+            {{ form_rest(contactForm) }}
+        </form>
     </div><!-- /container -->
 </section>

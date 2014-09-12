@@ -9,9 +9,41 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 //Request::setTrustedProxies(array('127.0.0.1'));
 
 $app->get('/', function () use ($app) {
-    return $app['twig']->render('index.html.twig', array());
+    $contactForm = $app['form.contact'];
+
+    return $app['twig']->render(
+        'index.html.twig',
+        array(
+            'contactForm' => $contactForm->createView()
+        )
+    );
 })
 ->bind('homepage')
+;
+
+$app->post('/contact', function () use ($app) {
+    $request = $app['request'];
+
+    $message = \Swift_Message::newInstance()
+        ->setSubject('[WEBSITE] Contact')
+        ->setFrom(array($app['contact']['from']))
+        ->setTo(array($app['contact']['to']))
+        ->setBody($app['twig']->render(
+            'email/contact.html.twig',
+            array(
+                'name' => $request->get('nombre'),
+                'email' => $request->get('email'),
+                'message' => $request->get('message')
+                )
+            ),
+            'text/html'
+        );
+
+    $app['mailer']->send($message);
+
+    return $app->json(array('ok' => true));
+})
+->bind('contact')
 ;
 
 $app->error(function (\Exception $e, $code) use ($app) {

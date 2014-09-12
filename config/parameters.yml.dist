@@ -1,4 +1,7 @@
 locale: en
+contact:
+    from: username@gmail.com
+    to: username@gmail.com
 swiftmailer.options:
     host: smtp.gmail.com
     port: 465
