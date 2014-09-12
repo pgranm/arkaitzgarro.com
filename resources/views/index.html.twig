@@ -1,5 +1,5 @@
 {% extends 'base.html.twig' %}
-{% block title %}{% endblock %}
+{% block title %}{{ 'title'|trans|raw }}{% endblock %}
 {% block id %}home{% endblock %}
 {% block body %}
     {% include 'partial/header.html.twig' %}

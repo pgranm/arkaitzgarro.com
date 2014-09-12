@@ -52,8 +52,8 @@ body {
     padding-bottom: 140px;
 }
 .banner h1 {
-    font-size: 62px;
-    line-height: 62px;
+    font-size: 40px;
+    line-height: 40px;
     font-weight: 300;
     letter-spacing: 1.5px;
     text-align: center;
@@ -97,7 +97,7 @@ body {
     background-color: #fff;
     padding-top: 80px;
 }
-.knowledge h1 {
+.knowledge h2 {
     margin: 0;
     padding-bottom: 10px;
     display: block;
@@ -108,9 +108,9 @@ body {
     font-weight: 300;
     color: #222;
 }
-.knowledge h2 {
+.knowledge p {
     margin: 0;
-    padding-bottom: 70px;
+    padding-bottom: 30px;
     display: block;
     clear: both;
     font-size: 18px;
@@ -132,13 +132,11 @@ body {
     margin-bottom: 15px;
     color: #0386c9!important;
     text-transform: uppercase;
-    font-family: 'Lato', sans-serif;
 }
-.knowledge-item p{
+.knowledge-item p {
     margin-bottom: 30px;
     font-size: 15px;
     line-height: 22px;
-    font-family: 'Lato', sans-serif;
     font-weight: 300;
 }
 .knowledge-right {
@@ -154,25 +152,25 @@ body {
     text-align: left;
 }
 .iconbox{
-    background: transparent url('../img/icon_borders.png') no-repeat 0 0;
-    height: 270px;
-    margin: 0 auto 40px auto;
+    min-height: 170px;
+    margin: 40px auto 30px auto;
     position: relative;
-    width: 270px;
-
 }
 .icntitle {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 300;
     line-height: 38px;
     text-align: center;
-    padding-top:0px;
+    text-transform: uppercase;
+    padding-top: 0px;
+    color: #000;
 }
 .icnp {
     text-align: center;
     line-height: 1.6;
+    color: #000;
 }
-.iconbox > a {
+.iconbox > span {
     height: 126px;
     left: 50%;
     margin: -63px 0 0 -63px;
@@ -186,22 +184,46 @@ body {
     transition: all .3s ease-out!important;
     width: 126px;
 }
-.icn-1 {
-    background-image: url('../img/i1.png');
+.symfony {
+    background-image: url('../img/symfony.png');
 }
-.icn-1:hover {
+.symfony:hover {
     background-position: center bottom;
 }
-.icn-2 {
-    background-image: url('../img/i2.png');
+.javascript {
+    background-image: url('../img/javascript.png');
 }
-.icn-2:hover {
+.javascript:hover {
     background-position: center bottom;
 }
-.icn-3 {
-    background-image: url('../img/i3.png');
+.html5 {
+    background-image: url('../img/html5.png');
 }
-.icn-3:hover {
+.html5:hover {
+    background-position: center bottom;
+}
+.css3 {
+    background-image: url('../img/css3.png');
+}
+.css3:hover {
+    background-position: center bottom;
+}
+.angularjs {
+    background-image: url('../img/angularjs.png');
+}
+.angularjs:hover {
+    background-position: center bottom;
+}
+.rwd {
+    background-image: url('../img/rwd.png');
+}
+.rwd:hover {
+    background-position: center bottom;
+}
+.android {
+    background-image: url('../img/android.png');
+}
+.android:hover {
     background-position: center bottom;
 }
 .icons_left, .icons_right {
