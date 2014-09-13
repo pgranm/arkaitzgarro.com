@@ -321,6 +321,22 @@ footer p {
     line-height: 20px;
 }
 
+.social .fa {
+    color: #fff;
+    text-align: center;
+    font-size: 2.5em;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+}
+
+.social .fa:hover {
+    text-decoration: none;
+}
+
+.social .fa.solo span {
+    display: none;
+}
+
 /* ========== MEDIA QUIRIES ========== */
 @media (min-width: 768px) {
     body {

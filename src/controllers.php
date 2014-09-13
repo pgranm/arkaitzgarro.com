@@ -14,7 +14,13 @@ $app->get('/', function () use ($app) {
     return $app['twig']->render(
         'index.html.twig',
         array(
-            'contactForm' => $contactForm->createView()
+            'contactForm' => $contactForm->createView(),
+            'links' => array(
+                'github' => 'https://github.com/arkaitzgarro',
+                'twitter' => 'https://twitter.com/arkaitzgarro',
+                'linkedin' => 'https://es.linkedin.com/in/arkaitzgarro',
+                'instagram' => 'http://instagram.com/arkaitzgarro',
+            )
         )
     );
 })
