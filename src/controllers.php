@@ -29,25 +29,34 @@ $app->get('/', function () use ($app) {
 
 $app->post('/contact', function () use ($app) {
     $request = $app['request'];
+    $contactForm = $app['form.contact'];
 
-    $message = \Swift_Message::newInstance()
-        ->setSubject('[WEBSITE] Contact')
-        ->setFrom(array($app['contact']['from']))
-        ->setTo(array($app['contact']['to']))
-        ->setBody($app['twig']->render(
-            'email/contact.html.twig',
-            array(
-                'name' => $request->get('nombre'),
-                'email' => $request->get('email'),
-                'message' => $request->get('message')
-                )
-            ),
-            'text/html'
-        );
+    $contactForm->bind($request);
+    if ($contactForm->isValid()) {
+        $data = $contactForm->getData();
 
-    $app['mailer']->send($message);
+        $message = \Swift_Message::newInstance()
+            ->setSubject('[WEBSITE] Contact')
+            ->setFrom(array($app['contact']['from']))
+            ->setTo(array($app['contact']['to']))
+            ->setReplyTo(array($data['email']))
+            ->setBody($app['twig']->render(
+                'email/contact.html.twig',
+                array(
+                    'name' => $data['name'],
+                    'email' => $data['email'],
+                    'message' => $data['message']
+                    )
+                ),
+                'text/html'
+            );
 
-    return $app->json(array('ok' => true));
+        $app['mailer']->send($message);
+
+        return $app->json(array('ok' => true));
+    }
+
+    return $app->json(array('ko' => true));
 })
 ->bind('contact')
 ;

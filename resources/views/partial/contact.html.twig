@@ -4,7 +4,7 @@
             <h2 class="col-xs-12">{{ 'contact_title'|trans }}</h2>
             <p class="col-xs-12 col-sm-8 col-sm-offset-2">{{ 'contact_text'|trans|raw }}</p>
         </div>
-        <form action="{{ path('contact') }}" method="post" class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <form action="{{ path('contact') }}" method="post" class="col-xs-12 col-sm-8 col-sm-offset-2" id="contact">
             <div class="row form-group">
                 <div class="col-xs-12">
                     {{ form_start(contactForm) }}

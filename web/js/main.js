@@ -87,4 +87,11 @@ $(document).ready(function() {
             }
         }
     });
+
+    // ==================== AJAX FORM ==================== //
+    // $('#contact').ajaxForm(function() {
+    //     alert("Thank you for your comment!");
+    // }).error(function() {
+
+    // });
 });
